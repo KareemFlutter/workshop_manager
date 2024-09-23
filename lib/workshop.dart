@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:workshop_manager/Core/app/app_routing.dart';
 import 'package:workshop_manager/Core/cubit/language/app_language_state.dart';
+import 'package:workshop_manager/Core/styles/app_styles.dart';
 import 'Core/cubit/language/app_language_cubit.dart';
 import 'generated/l10n.dart';
 
@@ -38,7 +39,7 @@ class WorkshopManager extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              theme: ThemeData(),
+              theme: themeData(),
             );
           } else {
             return const SizedBox();
