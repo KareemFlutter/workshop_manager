@@ -8,6 +8,8 @@ ThemeData themeData() {
     inputDecorationTheme: InputDecorationTheme(
       focusedBorder: outLineInputBorder(),
       enabledBorder: outLineInputBorder(),
+      errorBorder: outLineInputBorder(color: AppColors.redED),
+      focusedErrorBorder: outLineInputBorder(color: AppColors.redED),
       filled: true,
       fillColor: AppColors.white,
       hintStyle: const TextStyle(

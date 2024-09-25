@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workshop_manager/workshop.dart';
 
-void main() {
+import 'di.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initDependencyInjection();
   runApp(const WorkshopManager());
 }

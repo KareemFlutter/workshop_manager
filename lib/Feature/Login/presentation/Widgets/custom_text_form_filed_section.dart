@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:workshop_manager/Feature/IntroScreen/presentation/Auth/Login/cubit/login_cubit.dart';
-import '../../../../../Core/constant/app_sized.dart';
-import '../../../../../Core/utils/app_colors.dart';
-import '../../../../../Core/widget/custom_app_text.dart';
+import 'package:workshop_manager/Core/func/validation.dart';
+import 'package:workshop_manager/Feature/Login/presentation/cubit/login_cubit.dart';
+import '../../../../Core/constant/app_sized.dart';
+import '../../../../Core/utils/app_colors.dart';
+import '../../../../Core/widget/custom_app_text.dart';
 import 'custom_text_form_filed.dart';
 
 class CustomTextFormFiledSection extends StatelessWidget {
@@ -28,6 +29,10 @@ class CustomTextFormFiledSection extends StatelessWidget {
               CustomTextFormFiled(
                 controller: cubit.nameController,
                 hint: "Kareem ",
+                validator: (value) {
+                  return AppValidation.phoneNumberVaildtor(
+                      cubit.nameController.text);
+                },
               ),
               height(16),
               const CustomAppText(
@@ -40,7 +45,18 @@ class CustomTextFormFiledSection extends StatelessWidget {
                 controller: cubit.passwordController,
                 obscureText: cubit.isObsecure,
                 hint: "**********",
-                suffixIcon: const Icon(Icons.visibility_off_outlined),
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    cubit.changeObscure();
+                  },
+                  icon: cubit.isObsecure
+                      ? const Icon(Icons.visibility_off_outlined)
+                      : const Icon(Icons.visibility_outlined),
+                ),
+                validator: (value) {
+                  return AppValidation.passwordVaildtor(
+                      cubit.passwordController.text);
+                },
               )
             ],
           ),

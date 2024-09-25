@@ -59,9 +59,7 @@ class IntroScreen extends StatelessWidget {
                 text: "إنشاء حساب",
                 width: double.maxFinite,
                 radius: 24,
-                onPressed: () {
-                  context.push(Routes.register);
-                },
+                onPressed: () {},
               ),
               height(36),
               CustomAppButton(

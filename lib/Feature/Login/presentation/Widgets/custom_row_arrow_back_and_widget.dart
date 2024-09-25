@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../Core/utils/app_imgaes.dart';
-import '../../../../../Core/widget/custom_arrow_back.dart';
+import '../../../../Core/utils/app_imgaes.dart';
+import '../../../../Core/widget/custom_arrow_back.dart';
 
 class CustomRowArrowBackAndWidget extends StatelessWidget {
   const CustomRowArrowBackAndWidget({super.key});
