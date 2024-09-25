@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:workshop_manager/Core/app/routes.dart';
 import 'package:workshop_manager/Core/extensions/extensions.dart';
-import 'package:workshop_manager/Feature/Login/presentation/cubit/login_cubit.dart';
+import 'package:workshop_manager/Feature/Auth/Login/presentation/cubit/login_cubit.dart';
 
-import '../../../../Core/utils/app_colors.dart';
-import '../../../../Core/widget/custom_app_text.dart';
+import '../../../../../Core/utils/app_colors.dart';
+import '../../../../../Core/widget/custom_app_text.dart';
 
 class CustomRowCheckBoxAndForgetPassword extends StatelessWidget {
   const CustomRowCheckBoxAndForgetPassword({super.key});
@@ -34,7 +36,9 @@ class CustomRowCheckBoxAndForgetPassword extends StatelessWidget {
             const CustomAppText(
               text: "هل نسيت كلمة المرور؟",
               color: AppColors.redED,
-            ).onTap(() {})
+            ).onTap(() {
+              context.push(Routes.forgetPassword);
+            })
           ],
         );
       },

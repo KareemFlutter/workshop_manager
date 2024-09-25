@@ -4,10 +4,10 @@ import 'package:bloc/bloc.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
-import 'package:workshop_manager/Feature/Login/data/models/login_model.dart';
-import 'package:workshop_manager/Feature/Login/domain/repos/login_repo.dart';
+import 'package:workshop_manager/Feature/Auth/Login/data/models/login_model.dart';
+import 'package:workshop_manager/Feature/Auth/Login/domain/repos/login_repo.dart';
 
-import '../../../../Core/service/auth_manager.dart';
+import '../../../../../Core/service/auth_manager.dart';
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

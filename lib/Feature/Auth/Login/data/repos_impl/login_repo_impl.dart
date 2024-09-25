@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:workshop_manager/Core/network/error/failure.dart';
-import 'package:workshop_manager/Feature/Login/data/models/login_model.dart';
-import 'package:workshop_manager/Feature/Login/domain/repos/login_repo.dart';
+import 'package:workshop_manager/Feature/Auth/Login/data/models/login_model.dart';
+import 'package:workshop_manager/Feature/Auth/Login/domain/repos/login_repo.dart';
 
 import '../source/login_source.dart';
 

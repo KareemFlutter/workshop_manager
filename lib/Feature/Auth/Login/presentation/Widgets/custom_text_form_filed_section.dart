@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:workshop_manager/Core/func/validation.dart';
-import 'package:workshop_manager/Feature/Login/presentation/cubit/login_cubit.dart';
-import '../../../../Core/constant/app_sized.dart';
-import '../../../../Core/utils/app_colors.dart';
-import '../../../../Core/widget/custom_app_text.dart';
+import 'package:workshop_manager/Feature/Auth/Login/presentation/cubit/login_cubit.dart';
+import '../../../../../Core/constant/app_sized.dart';
+import '../../../../../Core/utils/app_colors.dart';
+import '../../../../../Core/widget/custom_app_text.dart';
 import 'custom_text_form_filed.dart';
 
 class CustomTextFormFiledSection extends StatelessWidget {

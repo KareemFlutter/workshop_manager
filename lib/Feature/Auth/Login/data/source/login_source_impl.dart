@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:workshop_manager/Core/constant/end_points.dart';
-import 'package:workshop_manager/Feature/Login/data/source/login_source.dart';
-import '../../../../Core/network/dio/base_dio.dart';
+import 'package:workshop_manager/Feature/Auth/Login/data/source/login_source.dart';
+import '../../../../../Core/network/dio/base_dio.dart';
 
 class LoginSourceImpl implements LoginSource {
   final BaseDio dio;

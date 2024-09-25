@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:workshop_manager/Feature/Login/data/models/login_model.dart';
+import 'package:workshop_manager/Feature/Auth/Login/data/models/login_model.dart';
 
-import '../../../../Core/network/error/failure.dart';
+import '../../../../../Core/network/error/failure.dart';
 
 abstract class LoginRepo {
   Future<Either<Failure, LoginModel>> login({
