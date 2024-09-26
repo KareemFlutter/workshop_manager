@@ -11,12 +11,17 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
 
   final TextEditingController controller = TextEditingController();
 
+  final formKey = GlobalKey<FormState>();
+
   Future<void> forgetPassword() async {
-    emit(ForgetPasswordLoadingState());
-    final result = await repo.forgetPassword(phone: controller.text);
-    result.fold(
-      (left) => emit(ForgetPasswordFailureState(left.message)),
-      (right) => emit(ForgetPasswordSuccessState(right)),
-    );
+    final isVaild = formKey.currentState!.validate();
+    if (isVaild) {
+      emit(ForgetPasswordLoadingState());
+      final result = await repo.forgetPassword(phone: controller.text);
+      result.fold(
+        (left) => emit(ForgetPasswordFailureState(left.message)),
+        (right) => emit(ForgetPasswordSuccessState(right)),
+      );
+    }
   }
 }

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:workshop_manager/Core/func/show_toast.dart';
 import 'package:workshop_manager/Core/utils/app_imgaes.dart';
 import 'package:workshop_manager/Core/widget/custom_arrow_back.dart';
 import 'package:workshop_manager/Feature/Auth/ForgetPassword/Presentation/cubit/forget_password_cubit.dart';
 import 'package:workshop_manager/Feature/Auth/Login/presentation/Widgets/custom_text_form_filed.dart';
 import 'package:workshop_manager/di.dart';
+import '../../../../../Core/app/routes.dart';
 import '../../../../../Core/constant/app_sized.dart';
 import '../../../../../Core/func/validation.dart';
 import '../../../../../Core/utils/app_colors.dart';
@@ -25,6 +27,9 @@ class ForgetPasswordScreen extends StatelessWidget {
             const CircularProgressIndicator();
           } else if (state is ForgetPasswordSuccessState) {
             showToast(message: state.message);
+            context.pushNamed(Routes.otp, pathParameters: {
+              'phone': context.read<ForgetPasswordCubit>().controller.text,
+            });
           } else if (state is ForgetPasswordFailureState) {
             showToast(message: state.message);
           }
@@ -69,13 +74,16 @@ class ForgetPasswordScreen extends StatelessWidget {
                               color: AppColors.black13,
                             ),
                             height(4),
-                            CustomTextFormFiled(
-                              controller: cubit.controller,
-                              hint: "12345687456845 ",
-                              validator: (value) {
-                                return AppValidation.phoneNumberVaildtor(
-                                    cubit.controller.text);
-                              },
+                            Form(
+                              key: cubit.formKey,
+                              child: CustomTextFormFiled(
+                                controller: cubit.controller,
+                                hint: "12345687456845 ",
+                                validator: (value) {
+                                  return AppValidation.phoneNumberVaildtor(
+                                      cubit.controller.text);
+                                },
+                              ),
                             ),
                             height(64),
                             CustomAppButton(
