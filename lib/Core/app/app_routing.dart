@@ -5,7 +5,7 @@ import 'package:workshop_manager/Feature/Auth/Login/presentation/views/login_scr
 import 'package:workshop_manager/Feature/Auth/OTP/data/model/otp_model.dart';
 import 'package:workshop_manager/Feature/Auth/OTP/presentation/views/otp_screen.dart';
 import 'package:workshop_manager/Feature/Auth/ResetPassword/Presentation/Views/resest_password_screen.dart';
-
+import 'package:workshop_manager/Feature/NavBar/Presentation/views/nav_bar_screen.dart';
 import '../../Feature/IntroScreen/presentation/views/intro_screen.dart';
 
 final GoRouter router = GoRouter(
@@ -40,5 +40,9 @@ final GoRouter router = GoRouter(
         );
       },
     ),
+    GoRoute(
+      path: Routes.navbar,
+      builder: (context, state) => const NavBarScreen(),
+    )
   ],
 );

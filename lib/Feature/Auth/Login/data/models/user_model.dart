@@ -5,9 +5,9 @@ class User with EquatableMixin {
   int? id;
   String? name;
   String? email;
-  Null emailVerifiedAt;
+  String? emailVerifiedAt;
   String? phone;
-  Null phoneVerifiedAt;
+  String? phoneVerifiedAt;
   String? type;
   Profile? profile;
 
@@ -31,9 +31,9 @@ class User with EquatableMixin {
       id: json['id'] as int?,
       name: json['name'] as String?,
       email: json['email'] as String?,
-      emailVerifiedAt: json['email_verified_at'] as Null,
+      emailVerifiedAt: json['email_verified_at'],
       phone: json['phone'] as String?,
-      phoneVerifiedAt: json['phone_verified_at'] as Null,
+      phoneVerifiedAt: json['phone_verified_at'],
       type: json['type'] as String?,
       profile: json['profile'] == null
           ? null

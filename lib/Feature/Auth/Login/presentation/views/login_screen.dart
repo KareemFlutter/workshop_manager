@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:workshop_manager/Core/app/routes.dart';
 import 'package:workshop_manager/Core/func/show_toast.dart';
 import 'package:workshop_manager/Core/utils/app_colors.dart';
 import 'package:workshop_manager/Core/widget/custom_app_text.dart';
@@ -24,6 +26,7 @@ class LoginScreen extends StatelessWidget {
             const CircularProgressIndicator();
           } else if (state is LoginSuccessState) {
             showToast(message: "Login Successfully");
+            context.push(Routes.navbar);
           } else if (state is LoginFauilreState) {
             showToast(message: state.message);
           }
