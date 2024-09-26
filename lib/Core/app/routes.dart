@@ -4,4 +4,5 @@ class Routes {
   static const String forgetPassword = "/forgetpassword";
   static const String otp = "/otpscreen";
   static const String resetPassword = "/resetpassword";
+  static const String navbar = "/navbarscreen";
 }

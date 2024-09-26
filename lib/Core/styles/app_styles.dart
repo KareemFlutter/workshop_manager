@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../constant/out_line_input_border.dart';
 import '../utils/app_colors.dart';
@@ -20,6 +21,7 @@ ThemeData themeData() {
       suffixIconColor: AppColors.grey9,
     ),
     appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: AppColors.white),
       backgroundColor: AppColors.white,
       centerTitle: true,
       elevation: 0.0,
