@@ -13,6 +13,11 @@ import 'package:workshop_manager/Feature/Auth/Login/presentation/cubit/login_cub
 import 'package:workshop_manager/Feature/Auth/OTP/data/repo/otp_repo_impl.dart';
 import 'package:workshop_manager/Feature/Auth/OTP/data/source/base/otp_source.dart';
 import 'package:workshop_manager/Feature/Auth/OTP/data/source/impl/otp_source_impl.dart';
+import 'package:workshop_manager/Feature/Auth/ResetPassword/Presentation/cubit/resetpassword_cubit.dart';
+import 'package:workshop_manager/Feature/Auth/ResetPassword/data/repo/reset_password_repo_impl.dart';
+import 'package:workshop_manager/Feature/Auth/ResetPassword/data/source/base/reset_password_source.dart';
+import 'package:workshop_manager/Feature/Auth/ResetPassword/data/source/impl/reset_password_source_impl.dart';
+import 'package:workshop_manager/Feature/Auth/ResetPassword/domain/repos/reset_password_repo.dart';
 import 'Core/network/dio/base_dio.dart';
 import 'Core/network/dio/dio_client.dart';
 import 'Core/network/dio/dio_interceptor.dart';
@@ -51,12 +56,15 @@ void _registerDataSources() {
   getIt.registerSingleton<ForgetPasswordSource>(
       ForgetPasswordSourceImpl(getIt()));
   getIt.registerSingleton<OtpSource>(OtpSourceImpl(getIt()));
+  getIt
+      .registerSingleton<ResetPasswordSource>(ResetPasswordSourceImpl(getIt()));
 }
 
 void _registerRepos() {
   getIt.registerSingleton<LoginRepo>(LoginRepoImpl(getIt()));
   getIt.registerSingleton<ForgetPasswordRepo>(ForgetPasswordRepoImpl(getIt()));
   getIt.registerSingleton<OtpRepo>(OtpRepoImpl(getIt()));
+  getIt.registerSingleton<ResetPasswordRepo>(ResetPasswordRepoImpl(getIt()));
 }
 
 void _registerFactory() {
@@ -64,4 +72,5 @@ void _registerFactory() {
   getIt
       .registerFactory<ForgetPasswordCubit>(() => ForgetPasswordCubit(getIt()));
   getIt.registerFactory<OtpCubit>(() => OtpCubit(getIt()));
+  getIt.registerFactory<ResetPasswordCubit>(() => ResetPasswordCubit(getIt()));
 }

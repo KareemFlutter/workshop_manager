@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:workshop_manager/Core/app/routes.dart';
 import 'package:workshop_manager/Feature/Auth/ForgetPassword/Presentation/views/forget_password_screen.dart';
 import 'package:workshop_manager/Feature/Auth/Login/presentation/views/login_screen.dart';
+import 'package:workshop_manager/Feature/Auth/OTP/data/model/otp_model.dart';
 import 'package:workshop_manager/Feature/Auth/OTP/presentation/views/otp_screen.dart';
 import 'package:workshop_manager/Feature/Auth/ResetPassword/Presentation/Views/resest_password_screen.dart';
 
@@ -32,7 +33,12 @@ final GoRouter router = GoRouter(
         }),
     GoRoute(
       path: Routes.resetPassword,
-      builder: (context, state) => const ResestPasswordScreen(),
+      builder: (context, state) {
+        final model = state.extra as OtpModel;
+        return ResestPasswordScreen(
+          model: model,
+        );
+      },
     ),
   ],
 );

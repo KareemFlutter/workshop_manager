@@ -3,4 +3,5 @@ class EndPoints {
   static String login = "authentication/workshop/login";
   static String forgetPaswword = "authentication/verify-phone";
   static String otp = "authentication/validate-otp";
+  static String resetPassword = "authentication/update-password";
 }

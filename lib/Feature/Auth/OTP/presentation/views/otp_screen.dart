@@ -30,7 +30,7 @@ class OtpScreen extends StatelessWidget {
             showToast(message: state.message);
           } else if (state is OtpSuccessState) {
             showToast(message: state.model.message!);
-            context.push(Routes.resetPassword);
+            context.push(Routes.resetPassword, extra: state.model);
           }
         },
         builder: (context, state) {

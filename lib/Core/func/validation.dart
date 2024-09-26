@@ -21,4 +21,11 @@ class AppValidation {
     }
     return null;
   }
+
+  static String? confirmPasswordVaildtor({String? password, String? value}) {
+    if (value != password) {
+      return "Password Must Be Similar ";
+    }
+    return null;
+  }
 }

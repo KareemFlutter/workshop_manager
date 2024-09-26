@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
+import 'package:workshop_manager/Core/extensions/extensions.dart';
 import '../utils/app_colors.dart';
 
 class CustomArrowBack extends StatelessWidget {
@@ -24,6 +25,8 @@ class CustomArrowBack extends StatelessWidget {
         Icons.arrow_back,
         color: AppColors.primary,
       ),
-    );
+    ).onTap(() {
+      context.pop();
+    });
   }
 }
