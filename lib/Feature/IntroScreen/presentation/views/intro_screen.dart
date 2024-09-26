@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:workshop_manager/Core/app/app_routing.dart';
 import 'package:workshop_manager/Core/app/routes.dart';
 import 'package:workshop_manager/Core/utils/app_colors.dart';
 import 'package:workshop_manager/Core/utils/app_imgaes.dart';
@@ -60,9 +59,7 @@ class IntroScreen extends StatelessWidget {
                 text: "إنشاء حساب",
                 width: double.maxFinite,
                 radius: 24,
-                onPressed: () {
-                  context.go(Routes.register);
-                },
+                onPressed: () {},
               ),
               height(36),
               CustomAppButton(
@@ -70,7 +67,7 @@ class IntroScreen extends StatelessWidget {
                 width: double.maxFinite,
                 radius: 24,
                 onPressed: () {
-                  context.go(Routes.login);
+                  context.push(Routes.login);
                 },
                 containerColor: AppColors.white,
                 textColor: AppColors.primary,
