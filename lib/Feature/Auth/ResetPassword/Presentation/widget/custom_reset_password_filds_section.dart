@@ -5,7 +5,7 @@ import '../../../../../Core/constant/app_sized.dart';
 import '../../../../../Core/func/validation.dart';
 import '../../../../../Core/utils/app_colors.dart';
 import '../../../../../Core/widget/custom_app_text.dart';
-import '../../../Login/presentation/Widgets/custom_text_form_filed.dart';
+import '../../../../add_workshop/Presentation/widgets/custom_text_form_filed.dart';
 
 class CustomResetPasswordFildsSection extends StatelessWidget {
   const CustomResetPasswordFildsSection({super.key});

@@ -5,7 +5,7 @@ import 'package:workshop_manager/Feature/Auth/Login/presentation/cubit/login_cub
 import '../../../../../Core/constant/app_sized.dart';
 import '../../../../../Core/utils/app_colors.dart';
 import '../../../../../Core/widget/custom_app_text.dart';
-import 'custom_text_form_filed.dart';
+import '../../../../add_workshop/Presentation/widgets/custom_text_form_filed.dart';
 
 class CustomTextFormFiledSection extends StatelessWidget {
   const CustomTextFormFiledSection({super.key});
