@@ -5,7 +5,7 @@ import 'package:workshop_manager/Core/func/show_toast.dart';
 import 'package:workshop_manager/Core/utils/app_imgaes.dart';
 import 'package:workshop_manager/Core/widget/custom_arrow_back.dart';
 import 'package:workshop_manager/Feature/Auth/ForgetPassword/Presentation/cubit/forget_password_cubit.dart';
-import 'package:workshop_manager/Feature/Auth/Login/presentation/Widgets/custom_text_form_filed.dart';
+import 'package:workshop_manager/Feature/add_workshop/Presentation/widgets/custom_text_form_filed.dart';
 import 'package:workshop_manager/di.dart';
 import '../../../../../Core/app/routes.dart';
 import '../../../../../Core/constant/app_sized.dart';

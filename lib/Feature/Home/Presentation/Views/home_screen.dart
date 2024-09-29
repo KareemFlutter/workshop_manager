@@ -1,6 +1,9 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:workshop_manager/Core/app/routes.dart';
+import 'package:workshop_manager/Core/extensions/extensions.dart';
 import 'package:workshop_manager/Core/utils/app_colors.dart';
 import 'package:workshop_manager/Core/utils/app_imgaes.dart';
 import 'package:workshop_manager/Core/widget/custom_app_text.dart';
@@ -31,22 +34,27 @@ class HomeScreen extends StatelessWidget {
             ),
             height(4),
             DottedBorder(
-                color: AppColors.primary,
-                padding: const EdgeInsets.all(20),
-                radius: const Radius.circular(12),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const CustomAppText(
-                      text: "اضف مركز",
-                      size: 18,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.primary,
-                    ),
-                    width(8),
-                    SvgPicture.asset(AppImages.add)
-                  ],
-                ))
+              color: AppColors.primary,
+              padding: const EdgeInsets.all(20),
+              radius: const Radius.circular(12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CustomAppText(
+                    text: "اضف مركز",
+                    size: 18,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.primary,
+                  ),
+                  width(8),
+                  SvgPicture.asset(AppImages.add)
+                ],
+              ).onTap(
+                () {
+                  context.push(Routes.addWorkShop);
+                },
+              ),
+            )
           ],
         ),
       ),

@@ -6,18 +6,21 @@ PreferredSizeWidget? appBar({
   Color? color,
   Widget? leading,
   List<Widget>? actions,
+  Color? textColor,
   required String title,
 }) {
   return AppBar(
+    surfaceTintColor: AppColors.white,
+    elevation: 0,
     backgroundColor: color,
     automaticallyImplyLeading: false,
     leading: leading,
     actions: actions,
     title: CustomAppText(
       text: title,
-      color: AppColors.white,
+      color: textColor ?? AppColors.white,
       fontWeight: FontWeight.w700,
-      size: 16,
+      size: 18,
     ),
   );
 }
