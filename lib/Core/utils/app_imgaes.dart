@@ -12,4 +12,5 @@ class AppImages {
   //! Vectors
   static const String filter = "$vectRoot/filter.svg";
   static const String add = "$vectRoot/add.svg";
+  static const String exclamation = "$vectRoot/exclamation.svg";
 }

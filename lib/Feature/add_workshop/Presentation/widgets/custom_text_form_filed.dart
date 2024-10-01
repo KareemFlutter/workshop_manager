@@ -9,6 +9,7 @@ class CustomTextFormFiled extends StatelessWidget {
   final Widget? prefixIcon;
   final int? maxLength;
   final int? maxLines;
+  final TextInputAction? textInputAction;
   const CustomTextFormFiled(
       {super.key,
       this.obscureText = false,
@@ -18,11 +19,13 @@ class CustomTextFormFiled extends StatelessWidget {
       this.validator,
       this.prefixIcon,
       this.maxLength,
-      this.maxLines = 1});
+      this.maxLines = 1,
+      this.textInputAction});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textInputAction: textInputAction,
       maxLines: maxLines,
       maxLength: maxLength,
       validator: validator,
