@@ -5,6 +5,7 @@ import 'package:workshop_manager/Feature/Auth/Login/presentation/views/login_scr
 import 'package:workshop_manager/Feature/Auth/OTP/data/model/otp_model.dart';
 import 'package:workshop_manager/Feature/Auth/OTP/presentation/views/otp_screen.dart';
 import 'package:workshop_manager/Feature/Auth/ResetPassword/Presentation/Views/resest_password_screen.dart';
+import 'package:workshop_manager/Feature/Auth/register/presentation/views/register_screen.dart';
 import 'package:workshop_manager/Feature/NavBar/Presentation/views/nav_bar_screen.dart';
 import 'package:workshop_manager/Feature/add_workshop/Presentation/views/add_work_shop.dart';
 import '../../Feature/IntroScreen/presentation/views/intro_screen.dart';
@@ -48,6 +49,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: Routes.addWorkShop,
       builder: (context, state) => const AddWorkShopScreen(),
+    ),
+    GoRoute(
+      path: Routes.register,
+      builder: (context, state) => const RegisterScreen(),
     )
   ],
 );

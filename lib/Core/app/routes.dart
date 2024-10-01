@@ -6,4 +6,5 @@ class Routes {
   static const String resetPassword = "/resetpassword";
   static const String navbar = "/navbarscreen";
   static const String addWorkShop = "/addworkshopscreen";
+  static const String register = "/registerscreen";
 }
