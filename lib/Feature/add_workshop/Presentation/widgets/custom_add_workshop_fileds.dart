@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:workshop_manager/Core/widget/custom_drop_down_container.dart';
 import 'package:workshop_manager/Feature/add_workshop/Presentation/widgets/custom_phone_number_row.dart';
-import 'package:workshop_manager/Feature/add_workshop/cubit/add_work_shop_cubit.dart';
+import 'package:workshop_manager/Feature/add_workshop/Presentation/cubit/add_work_shop_cubit.dart';
 import '../../../../Core/constant/app_sized.dart';
 import '../../../../Core/utils/app_colors.dart';
 import '../../../../Core/widget/custom_app_text.dart';

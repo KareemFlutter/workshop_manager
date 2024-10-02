@@ -5,4 +5,8 @@ class EndPoints {
   static String otp = "authentication/validate-otp";
   static String resetPassword = "authentication/update-password";
   static String register = "authentication/workshop-manager/registeration";
+  static String addWorkshop = "workshop-manager/workshops";
+  static String service = "selectors/goves";
+  static String goves = "selectors/goves";
+  static String brands = "selectors/car-brands-models";
 }
