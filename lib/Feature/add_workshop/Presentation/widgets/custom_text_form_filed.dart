@@ -10,6 +10,7 @@ class CustomTextFormFiled extends StatelessWidget {
   final int? maxLength;
   final int? maxLines;
   final TextInputAction? textInputAction;
+  final bool? enabled;
   const CustomTextFormFiled(
       {super.key,
       this.obscureText = false,
@@ -20,11 +21,13 @@ class CustomTextFormFiled extends StatelessWidget {
       this.prefixIcon,
       this.maxLength,
       this.maxLines = 1,
-      this.textInputAction});
+      this.textInputAction,
+      this.enabled});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: enabled,
       textInputAction: textInputAction,
       maxLines: maxLines,
       maxLength: maxLength,

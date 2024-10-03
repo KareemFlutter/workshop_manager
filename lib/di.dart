@@ -28,6 +28,11 @@ import 'package:workshop_manager/Feature/add_workshop/data/repo/add_workshop_rep
 import 'package:workshop_manager/Feature/add_workshop/data/source/base/add_workshop_source.dart';
 import 'package:workshop_manager/Feature/add_workshop/data/source/impl/add_workshop_source_impl.dart';
 import 'package:workshop_manager/Feature/add_workshop/domain/respo/add_workshop_repo.dart';
+import 'package:workshop_manager/Feature/goves_and_district/Presentation/cubit/goves_and_district_cubit.dart';
+import 'package:workshop_manager/Feature/goves_and_district/data/repo/goves_and_district_repo_impl.dart';
+import 'package:workshop_manager/Feature/goves_and_district/data/source/base/goves_and_distric_source.dart';
+import 'package:workshop_manager/Feature/goves_and_district/data/source/impl/goves_and_distict_source_impl.dart';
+import 'package:workshop_manager/Feature/goves_and_district/domain/repo/goves_and_district_repo.dart';
 import 'Core/network/dio/base_dio.dart';
 import 'Core/network/dio/dio_client.dart';
 import 'Core/network/dio/dio_interceptor.dart';
@@ -70,6 +75,8 @@ void _registerDataSources() {
       .registerSingleton<ResetPasswordSource>(ResetPasswordSourceImpl(getIt()));
   getIt.registerSingleton<RegisterSource>(RegisterSourceImpl(getIt()));
   getIt.registerSingleton<AddWorkshopSource>(AddWorkshopSourceImpl(getIt()));
+  getIt.registerSingleton<GovesAndDistricSource>(
+      GovesAndDistictSourceImpl(getIt()));
 }
 
 void _registerRepos() {
@@ -79,6 +86,8 @@ void _registerRepos() {
   getIt.registerSingleton<ResetPasswordRepo>(ResetPasswordRepoImpl(getIt()));
   getIt.registerSingleton<RegisterRepo>(RegisterRepoImpl(getIt()));
   getIt.registerSingleton<AddWorkshopRepo>(AddWorkshopRepoImol(getIt()));
+  getIt.registerSingleton<GovesAndDistrictRepo>(
+      GovesAndDistrictRepoImpl(getIt()));
 }
 
 void _registerFactory() {
@@ -89,4 +98,6 @@ void _registerFactory() {
   getIt.registerFactory<ResetPasswordCubit>(() => ResetPasswordCubit(getIt()));
   getIt.registerFactory<RegisterCubit>(() => RegisterCubit(getIt()));
   getIt.registerFactory<AddWorkShopCubit>(() => AddWorkShopCubit(getIt()));
+  getIt.registerFactory<GovesAndDistrictCubit>(
+      () => GovesAndDistrictCubit(getIt()));
 }

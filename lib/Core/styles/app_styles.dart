@@ -7,6 +7,7 @@ import '../utils/app_colors.dart';
 ThemeData themeData() {
   return ThemeData(
     inputDecorationTheme: InputDecorationTheme(
+      disabledBorder: outLineInputBorder(),
       focusedBorder: outLineInputBorder(),
       enabledBorder: outLineInputBorder(),
       errorBorder: outLineInputBorder(color: AppColors.redED),

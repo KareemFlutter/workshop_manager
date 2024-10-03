@@ -4,7 +4,6 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:location/location.dart';
 import 'package:workshop_manager/Feature/add_workshop/data/model/workshop_model.dart';
 import 'package:workshop_manager/Feature/add_workshop/domain/respo/add_workshop_repo.dart';
 import 'package:workshop_manager/Feature/goves_and_district/data/models/goves_and_district_model.dart';
@@ -35,8 +34,8 @@ class AddWorkShopCubit extends Cubit<AddWorkShopState> {
   String capacityNumber = "1";
 
   //! Location
-  LocationData? currentLocation;
-  String? locationString;
+  // LocationData? currentLocation;
+  // String? locationString;
   Future<void> addWorkshop() async {
     emit(AddWorkShopLoaddingState());
     try {

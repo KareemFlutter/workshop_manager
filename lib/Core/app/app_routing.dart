@@ -8,6 +8,7 @@ import 'package:workshop_manager/Feature/Auth/ResetPassword/Presentation/Views/r
 import 'package:workshop_manager/Feature/Auth/register/presentation/views/register_screen.dart';
 import 'package:workshop_manager/Feature/NavBar/Presentation/views/nav_bar_screen.dart';
 import 'package:workshop_manager/Feature/add_workshop/Presentation/views/add_work_shop.dart';
+import 'package:workshop_manager/Feature/workshop_working_time/presentation/views/workshop_working_time_screen.dart';
 import '../../Feature/IntroScreen/presentation/views/intro_screen.dart';
 
 final GoRouter router = GoRouter(
@@ -53,6 +54,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: Routes.register,
       builder: (context, state) => const RegisterScreen(),
+    ),
+    GoRoute(
+      path: Routes.workshopWorkingTime,
+      builder: (context, state) => const WorkshopWorkingTimeScreen(),
     )
   ],
 );
