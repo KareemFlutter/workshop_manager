@@ -17,12 +17,12 @@ class GovesAndDistrictRepoImpl implements GovesAndDistrictRepo {
       }
 
       final List<dynamic> dataList = response['data'] as List<dynamic>;
-      final List<GovesAndDistrict> services = dataList
+      final List<GovesAndDistrict> goves = dataList
           .map(
               (json) => GovesAndDistrict.fromJson(json as Map<String, dynamic>))
           .toList();
 
-      return Right(services);
+      return Right(goves);
     } catch (e) {
       return Left(
         ServerFailure(e.toString()),

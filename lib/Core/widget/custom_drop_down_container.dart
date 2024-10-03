@@ -9,13 +9,15 @@ class CustomDropDownContainer extends StatelessWidget {
   final void Function(Object?)? onChanged;
   final BorderRadiusGeometry? borderRadius;
   final Widget? icon;
+  final Color? hintColor;
   const CustomDropDownContainer(
       {super.key,
       required this.hint,
       this.items,
       this.onChanged,
       this.borderRadius,
-      this.icon});
+      this.icon,
+      this.hintColor});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class CustomDropDownContainer extends StatelessWidget {
         hint: CustomAppText(
           text: hint,
           size: 14,
-          color: AppColors.grey9,
+          color: hintColor ?? AppColors.grey9,
           fontWeight: FontWeight.w700,
         ),
         items: items,
