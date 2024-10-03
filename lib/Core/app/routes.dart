@@ -7,4 +7,5 @@ class Routes {
   static const String navbar = "/navbarscreen";
   static const String addWorkShop = "/addworkshopscreen";
   static const String register = "/registerscreen";
+  static const String workshopWorkingTime = "/workshopworkingtime";
 }
